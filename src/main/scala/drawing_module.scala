@@ -1,6 +1,6 @@
-import java.awt.{BasicStroke, Color, Graphics2D}
 import java.awt.geom.{Ellipse2D, Line2D}
 import java.awt.image.BufferedImage
+import java.awt.{BasicStroke, Color, Graphics2D}
 
 class drawing_module (val file_name: String,val size: (Int,Int)){
   // Param = file name and width,height of canvas
@@ -23,16 +23,15 @@ class drawing_module (val file_name: String,val size: (Int,Int)){
     g.setColor(Color.BLACK) // same as Color.BLUE
     g.draw(new Line2D.Double(x1,y1,x2,y2))
   }
-  def draw_circle(x: Double,y: Double, radius: Double): Unit ={
 
+  def draw_circle(x: Double,y: Double, radius: Double): Unit ={
     g.setStroke(new BasicStroke())  // reset to default
     g.setColor(Color.BLACK)
     g.draw(new Ellipse2D.Double(x-radius,y-radius,2*radius,2*radius))
-    //g.draw(new Ellipse2D.Double())
   }
 
   def finnish(): Unit ={
-    // Finaliza a escrita no canvas
+    // Finnish writing canvas
     g.dispose()
     javax.imageio.ImageIO.write(canvas, "png", new java.io.File(file_name))
   }
