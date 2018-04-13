@@ -18,7 +18,27 @@ object Main {
     SimpleFractals.circle_fractal_3(683,384,190,circle_f3)
     circle_f3.finnish()
   }
+
+  def colorConvert(value: Double) : CustomColor = {
+    println((value))
+    CustomColor((value * 255).toInt, (value * 255).toInt, (value * 255).toInt)
+  }
+
   def main(args: Array[String]) {
-    val m = new Mandelbrot(1920,1080,1000)
+    val m = new Mandelbrot()
+
+    val palette = Palette(Array(
+      (0.000, CustomColor(0.0, 0.0, 0.4)),
+      (0.010, CustomColor(0.1, 0.1, 0.1)),
+      (0.018, CustomColor(1.0, 1.0, 0.3)),
+      (0.022, CustomColor(0.0, 0.4, 0.0)),
+      (0.040, CustomColor(1.0, 1.0, 1.0)),
+      (0.200, CustomColor(0.0, 0.0, 0.6)),
+      (0.500, CustomColor(0.0, 0.0, 0.0)),
+      (1.000, CustomColor(1.0, 1.0, 1.0)),
+      (Double.PositiveInfinity, CustomColor.Black)
+    ))
+
+    m.generate(1920, 1080, palette)
   }
 }

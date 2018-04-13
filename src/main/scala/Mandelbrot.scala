@@ -4,58 +4,42 @@ import java.io.File
 
 import javax.imageio.ImageIO
 
-class Mandelbrot(width: Int, height: Int, max_iterations: Int) {
-  val image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB)
-  // Palette of colors
-  val palette = new Array[Int](max_iterations+1)
-  // Initial values of mandelbrot
-  val xMin: Double = -2.0
-  val xMax: Double =  1.0
-  val yMin: Double = -1.0
-  val yMax: Double =  1.0
+class Mandelbrot {
+  private val lg2 = math.log(2.0)
+  private def log2(value: Double) = math.log(value) / lg2
 
-  initialize()
+  def converges(c: ComplexNumber, maxIt: Int): Double = {
+    var z = ComplexNumber(0, 0)
+    var it = 0
 
-  def initialize(): Unit = {
-    for ( i <- 0 to max_iterations) {
-      // Initialize palette colors
-      palette(i) = Color.HSBtoRGB(i / 256f, 1, i / (i + 8f))
+    while (z.absSquare <= 4.0 && it < maxIt) {
+      z = z*z + c
+      it += 1
     }
-    main_loop()
+
+    if (it < maxIt) {
+      (it - log2(log2(z.abs))) / maxIt
+    }
+    else {
+      Double.PositiveInfinity
+    }
   }
 
-  def is_mandelbrot(x0: Double, y0: Double): Int ={
-    var x :Double = 0
-    var y :Double = 0
-    var iteration = 0
+  def generate(width: Int, height: Int, palette: Palette): Unit = {
+    val image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB)
+    val xRange :Range = Range(-1, -0.5)
+    val yRange :Range = Range(-0.5625, -0.28125)
 
-    while( x*x + y*y < 4 && iteration < max_iterations){
-      x = x*x - y*y + x0
-      y = 2*x*y + y0
-      iteration += 1
-    }
-    iteration
-  }
-
-  def main_loop(): Unit ={
     for(y <- 0 until height){
       for(x <- 0 until width){
-        // Map real number(scaled x coordinate of pixel)
-        val cr: Double = x * ((xMax-xMin)/width) + xMin
-        // Map imaginary number(scaled y coordinate of pixel)
-        val ci: Double = y * ((yMax-yMin)/height) + yMin
-        val i = is_mandelbrot(cr,ci)
-        // Set color
-        val color = palette(i)
-        if (i < max_iterations){
-          image.setRGB(x,y,color)
-        }
-        else {
-          image.setRGB(x, y, 0)
-        }
+        val point :ComplexNumber = ComplexNumber(xRange.min + (xRange.dist * x.toDouble / width.toDouble),
+                                     yRange.max - (yRange.dist * y.toDouble / height.toDouble))
+
+        val i = converges(point, 1000)
+        image.setRGB(x,y,palette(i).toRGB)
       }
     }
     ImageIO.write(image, "png", new File("output/mandelbrot.png"))
-  }
 
+  }
 }
