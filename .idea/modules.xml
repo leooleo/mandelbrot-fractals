@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fractal.iml" filepath="$PROJECT_DIR$/.idea/modules/fractal.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fractal-build.iml" filepath="$PROJECT_DIR$/.idea/modules/fractal-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mandelbrot-fractals.iml" filepath="$PROJECT_DIR$/.idea/modules/mandelbrot-fractals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mandelbrot-fractals-build.iml" filepath="$PROJECT_DIR$/.idea/modules/mandelbrot-fractals-build.iml" />
     </modules>
   </component>
 </project>

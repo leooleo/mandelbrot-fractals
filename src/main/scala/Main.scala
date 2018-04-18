@@ -26,6 +26,7 @@ object Main {
 
   def main(args: Array[String]) {
     val m = new Mandelbrot()
+    val j = new Julia()
 
     val palette = Palette(Array(
       (0.000, CustomColor(0.0, 0.0, 0.4)),
@@ -39,6 +40,7 @@ object Main {
       (Double.PositiveInfinity, CustomColor.Black)
     ))
 
-    m.generate(1920, 1080, palette)
+    m.generate(1920, 1080, palette, "output/m.png")
+    j.generate(1920, 1080, palette, "output/j.png")
   }
 }
