@@ -1,4 +1,5 @@
-
+import java.io.File
+import javax.imageio.ImageIO
 
 object Main {
   def call_fractals(): Unit = {
@@ -40,7 +41,9 @@ object Main {
       (Double.PositiveInfinity, CustomColor.Black)
     ))
 
-    m.generate(1920, 1080, palette, "output/m.png")
-    j.generate(1920, 1080, palette, "output/j.png")
+    val mImage = m.generate(1280, 720, ComplexNumber(-1.02100, 0.27010), 0.00001225, palette)
+    //val jImage = j.generate(1280, 720, ComplexNumber(0, 0), 2, palette)
+    ImageIO.write(mImage, "png", new File("output/m.png"))
+    //ImageIO.write(jImage, "png", new File("output/j.png"))
   }
 }

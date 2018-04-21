@@ -1,7 +1,4 @@
 import java.awt.image.BufferedImage
-import java.io.File
-
-import javax.imageio.ImageIO
 
 class Mandelbrot {
   protected val lg2 = math.log(2.0)
@@ -24,12 +21,11 @@ class Mandelbrot {
     }
   }
 
-  def generate(width: Int, height: Int, palette: Palette, name: String): Unit = {
+  def generate(width: Int, height: Int, center: ComplexNumber, scale: Double, palette: Palette): BufferedImage = {
     val image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB)
-    val xRange :Range = Range(-2, 2)
-    val yRange :Range = Range(-1, 1)
-
-
+    val ratio = width.toDouble / height.toDouble
+    val xRange :Range = Range(center.real - scale, center.real + scale)
+    val yRange :Range = Range(center.imaginary - (scale / ratio), center.imaginary + (scale / ratio));
 
     for(y <- 0 until height){
       for(x <- 0 until width){
@@ -40,7 +36,8 @@ class Mandelbrot {
         image.setRGB(x,y,palette(i).toRGB)
       }
     }
-    ImageIO.write(image, "png", new File(name))
+
+    image
 
   }
 }
