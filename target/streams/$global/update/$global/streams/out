@@ -20,7 +20,7 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.5 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.5 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.5 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] sbt-chain: Checking cache for: dependency: org.scalafx#scalafx_2.12;8.0.144-R12 {compile=[default(compile)]}
 [debug] sbt-chain-delegate: Checking cache for: dependency: org.scalafx#scalafx_2.12;8.0.144-R12 {compile=[default(compile)]}
-[debug] 		tried /home/mellin/.ivy2/local/org.scalafx/scalafx_2.12/8.0.144-R12/ivys/ivy.xml
+[debug] 		tried /home/gabriel/.ivy2/local/org.scalafx/scalafx_2.12/8.0.144-R12/ivys/ivy.xml
 [debug] 	local: no ivy file found for org.scalafx#scalafx_2.12;8.0.144-R12
 [debug] 		tried https://repo1.maven.org/maven2/org/scalafx/scalafx_2.12/8.0.144-R12/scalafx_2.12-8.0.144-R12.pom
 [debug] 	public: found md file for org.scalafx#scalafx_2.12;8.0.144-R12
@@ -29,8 +29,8 @@
 [debug] 	public: downloading https://repo1.maven.org/maven2/org/scalafx/scalafx_2.12/8.0.144-R12/scalafx_2.12-8.0.144-R12.pom
 [debug] 	public: downloading https://repo1.maven.org/maven2/org/scalafx/scalafx_2.12/8.0.144-R12/scalafx_2.12-8.0.144-R12.pom.sha1
 [debug] sha1 OK for https://repo1.maven.org/maven2/org/scalafx/scalafx_2.12/8.0.144-R12/scalafx_2.12-8.0.144-R12.pom
-[debug] 	[SUCCESSFUL ] org.scalafx#scalafx_2.12;8.0.144-R12!scalafx_2.12.pom(pom.original) (595ms)
-[debug] 		tried /home/mellin/.ivy2/local/org.scalafx/scalafx_2.12/8.0.144-R12/jars/scalafx_2.12.jar
+[debug] 	[SUCCESSFUL ] org.scalafx#scalafx_2.12;8.0.144-R12!scalafx_2.12.pom(pom.original) (561ms)
+[debug] 		tried /home/gabriel/.ivy2/local/org.scalafx/scalafx_2.12/8.0.144-R12/jars/scalafx_2.12.jar
 [debug] 		tried https://repo1.maven.org/maven2/org/scalafx/scalafx_2.12/8.0.144-R12/scalafx_2.12-8.0.144-R12.jar
 [debug] 	found org.scalafx#scalafx_2.12;8.0.144-R12 in public
 [debug] == resolving dependencies fractal#fractal_2.12;0.1->org.scalafx#scalafx_2.12;8.0.144-R12 [compile->runtime]
@@ -659,124 +659,28 @@
 [debug] ignoring unhandled DependencyDescriptorMediator: class sbt.internal.librarymanagement.IvyScalaUtil$OverrideScalaMediator
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(bundle)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.5!scala-compiler.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.5!scala-reflect.jar
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(bundle)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.5!scala-library.jar
 [debug] 	[NOT REQUIRED] jline#jline;2.14.5!jline.jar
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.5!scala-library.jar
 [debug] 		tried https://repo1.maven.org/maven2/org/scalafx/scalafx_2.12/8.0.144-R12/scalafx_2.12-8.0.144-R12.jar
-[debug] no default ivy user dir defined: set to /home/mellin/.ivy2
-[debug] no default ivy user dir defined: set to /home/mellin/.ivy2
 [info] downloading https://repo1.maven.org/maven2/org/scalafx/scalafx_2.12/8.0.144-R12/scalafx_2.12-8.0.144-R12.jar ...
-[debug] no default ivy user dir defined: set to /home/mellin/.ivy2
-[debug] no default ivy user dir defined: set to /home/mellin/.ivy2
 [debug] 	public: downloading https://repo1.maven.org/maven2/org/scalafx/scalafx_2.12/8.0.144-R12/scalafx_2.12-8.0.144-R12.jar
-[debug] no default ivy user dir defined: set to /home/mellin/.ivy2
-[debug] no default ivy user dir defined: set to /home/mellin/.ivy2
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to /home/mellin/.ivy2/cache
-[debug] no default cache defined: set to /home/mellin/.ivy2/cache
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to /home/mellin/.ivy2/cache
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to /home/mellin/.ivy2/cache
-[debug] no default cache defined: set to /home/mellin/.ivy2/cache
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] no default cache defined: set to /home/mellin/.ivy2/cache
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (84ms)
-[debug] 	default cache: /home/mellin/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (76ms)
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	default cache: /home/mellin/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] 	local [file]
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] settings loaded (107ms)
-[debug] 	default cache: /home/mellin/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] settings loaded (112ms)
-[debug] 	default cache: /home/mellin/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/home/mellin/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.1.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (121ms)
-[debug] 	default cache: /home/mellin/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (124ms)
-[debug] 	default cache: /home/mellin/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
 [debug] 	public: downloading https://repo1.maven.org/maven2/org/scalafx/scalafx_2.12/8.0.144-R12/scalafx_2.12-8.0.144-R12.jar.sha1
 [debug] sha1 OK for https://repo1.maven.org/maven2/org/scalafx/scalafx_2.12/8.0.144-R12/scalafx_2.12-8.0.144-R12.jar
-[info] 	[SUCCESSFUL ] org.scalafx#scalafx_2.12;8.0.144-R12!scalafx_2.12.jar (2632ms)
-[debug] :: resolution report :: resolve 3185ms :: artifacts dl 2661ms
-[debug] 	report for fractal#fractal_2.12;0.1 compile produced in /home/mellin/IdeaProjects/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-compile.xml
-[debug] 	report for fractal#fractal_2.12;0.1 runtime produced in /home/mellin/IdeaProjects/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-runtime.xml
-[debug] 	report for fractal#fractal_2.12;0.1 test produced in /home/mellin/IdeaProjects/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-test.xml
-[debug] 	report for fractal#fractal_2.12;0.1 provided produced in /home/mellin/IdeaProjects/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-provided.xml
-[debug] 	report for fractal#fractal_2.12;0.1 optional produced in /home/mellin/IdeaProjects/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-optional.xml
-[debug] 	report for fractal#fractal_2.12;0.1 compile-internal produced in /home/mellin/IdeaProjects/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-compile-internal.xml
-[debug] 	report for fractal#fractal_2.12;0.1 runtime-internal produced in /home/mellin/IdeaProjects/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-runtime-internal.xml
-[debug] 	report for fractal#fractal_2.12;0.1 test-internal produced in /home/mellin/IdeaProjects/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-test-internal.xml
-[debug] 	report for fractal#fractal_2.12;0.1 plugin produced in /home/mellin/IdeaProjects/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-plugin.xml
-[debug] 	report for fractal#fractal_2.12;0.1 pom produced in /home/mellin/IdeaProjects/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-pom.xml
-[debug] 	report for fractal#fractal_2.12;0.1 scala-tool produced in /home/mellin/IdeaProjects/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-scala-tool.xml
-[debug] 	resolve done (3185ms resolve - 2661ms download)
+[info] 	[SUCCESSFUL ] org.scalafx#scalafx_2.12;8.0.144-R12!scalafx_2.12.jar (56385ms)
+[debug] :: resolution report :: resolve 4857ms :: artifacts dl 56392ms
+[debug] 	report for fractal#fractal_2.12;0.1 compile produced in /home/gabriel/unb/lp/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-compile.xml
+[debug] 	report for fractal#fractal_2.12;0.1 runtime produced in /home/gabriel/unb/lp/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-runtime.xml
+[debug] 	report for fractal#fractal_2.12;0.1 test produced in /home/gabriel/unb/lp/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-test.xml
+[debug] 	report for fractal#fractal_2.12;0.1 provided produced in /home/gabriel/unb/lp/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-provided.xml
+[debug] 	report for fractal#fractal_2.12;0.1 optional produced in /home/gabriel/unb/lp/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-optional.xml
+[debug] 	report for fractal#fractal_2.12;0.1 compile-internal produced in /home/gabriel/unb/lp/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-compile-internal.xml
+[debug] 	report for fractal#fractal_2.12;0.1 runtime-internal produced in /home/gabriel/unb/lp/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-runtime-internal.xml
+[debug] 	report for fractal#fractal_2.12;0.1 test-internal produced in /home/gabriel/unb/lp/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-test-internal.xml
+[debug] 	report for fractal#fractal_2.12;0.1 plugin produced in /home/gabriel/unb/lp/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-plugin.xml
+[debug] 	report for fractal#fractal_2.12;0.1 pom produced in /home/gabriel/unb/lp/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-pom.xml
+[debug] 	report for fractal#fractal_2.12;0.1 scala-tool produced in /home/gabriel/unb/lp/mandelbrot-fractals/target/scala-2.12/resolution-cache/reports/fractal-fractal_2.12-scala-tool.xml
+[debug] 	resolve done (4857ms resolve - 56392ms download)
 [info] Done updating.
