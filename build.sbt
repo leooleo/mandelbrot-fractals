@@ -1,7 +1,17 @@
-name := "fractal"
+name := """fractals"""
+organization := "UnB"
 
-version := "0.1"
+version := "1.0-SNAPSHOT"
 
-scalaVersion := "2.12.5"
+lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
-libraryDependencies += "org.scalafx" %% "scalafx" % "8.0.144-R12"
+scalaVersion := "2.12.4"
+
+libraryDependencies += guice
+libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test
+
+// Adds additional packages into Twirl
+//TwirlKeys.templateImports += "UnB.controllers._"
+
+// Adds additional packages into conf/routes
+// play.sbt.routes.RoutesKeys.routesImport += "UnB.binders._"
