@@ -1,5 +1,0 @@
-[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/leo/programa/LP/fractals/conf/application.conf,/home/leo/programa/LP/fractals/target/scala-2.12/classes/application.conf)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/leo/programa/LP/fractals/conf/messages,/home/leo/programa/LP/fractals/target/scala-2.12/classes/messages)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/leo/programa/LP/fractals/conf/logback.xml,/home/leo/programa/LP/fractals/target/scala-2.12/classes/logback.xml)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/home/leo/programa/LP/fractals/conf/routes,/home/leo/programa/LP/fractals/target/scala-2.12/classes/routes)[0m

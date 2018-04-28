@@ -42,9 +42,9 @@ object Main {
       (Double.PositiveInfinity, CustomColor.Black)
     ))
 
-    val mImage = m.generate(1280, 720, ComplexNumber(-1.02100, 0.27010), 0.00001225, palette)
+    val mImage = m.generate(1280, 720, ComplexNumber(-1.02100, 0.27010), 0.00001225, palette) 
     //val jImage = j.generate(1280, 720, ComplexNumber(0, 0), 2, palette)
-    ImageIO.write(mImage, "png", new File("../views/m.png"))
+    ImageIO.write(mImage, "png", new File("public/images/m.png"))
     //ImageIO.write(jImage, "png", new File("output/j.png"))
   }
 }

@@ -1,5 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/home/leo/programa/LP/fractals/app/controllers/HomeController.scala:28:14: not enough arguments for method main: (args: Array[String])Unit.[0m
-[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter args.[0m
-[0m[[0m[31merror[0m] [0m[0m    Main.main()[0m
-[0m[[0m[31merror[0m] [0m[0m             ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
