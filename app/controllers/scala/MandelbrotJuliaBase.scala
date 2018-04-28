@@ -1,13 +1,13 @@
 package scala
 import java.awt.image.BufferedImage
 
-abstract class Fractal {
+abstract class MandelbrotJuliaBase {
   protected val lg2 = math.log(2.0)
   protected def log2(value: Double) = math.log(value) / lg2
 
   def converges(c: ComplexNumber, maxIt: Int) : Double
 
-  def generate(width: Int, height: Int, center: ComplexNumber, scale: Double, palette: Palette): BufferedImage = {
+  def generate(width: Int, height: Int, iteration: Int, center: ComplexNumber, scale: Double, palette: Palette): BufferedImage = {
     val image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB)
     val ratio = width.toDouble / height.toDouble
     val xRange :RangeDouble = RangeDouble(center.real - scale, center.real + scale)
@@ -18,7 +18,7 @@ abstract class Fractal {
         val point :ComplexNumber = ComplexNumber(xRange.min + (xRange.dist * x.toDouble / width.toDouble),
           yRange.max - (yRange.dist * y.toDouble / height.toDouble))
 
-        val i = converges(point, 1000)
+        val i = converges(point, iteration)
         image.setRGB(x,y,palette(i).toRGB)
       }
     }

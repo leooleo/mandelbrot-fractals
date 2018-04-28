@@ -1,7 +1,7 @@
 package scala
 import java.awt.image.BufferedImage
 
-class Mandelbrot extends Fractal{
+class Mandelbrot extends MandelbrotJuliaBase {
   override def converges(c: ComplexNumber, maxIt: Int): Double = {
     var z = ComplexNumber(0, 0)
     var it = 0

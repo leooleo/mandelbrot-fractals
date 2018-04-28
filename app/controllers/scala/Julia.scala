@@ -1,8 +1,7 @@
 package scala
 
-class Julia extends Fractal {
+class Julia (c: ComplexNumber) extends MandelbrotJuliaBase {
   override def converges(z: ComplexNumber, maxIt: Int): Double = {
-    val c = ComplexNumber(0.45, 0.1428)
     var zz = z
     var it = 0
 

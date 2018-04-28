@@ -28,8 +28,6 @@ object Main {
 
   def main(args: Array[String]) {
     val m = new Mandelbrot()
-    val j = new Julia()
-
     val palette = Palette(Array(
       (0.000, CustomColor(0.0, 0.0, 0.4)),
       (0.010, CustomColor(0.1, 0.1, 0.1)),
@@ -42,7 +40,7 @@ object Main {
       (Double.PositiveInfinity, CustomColor.Black)
     ))
 
-    val mImage = m.generate(1280, 720, ComplexNumber(-1.02100, 0.27010), 0.00001225, palette) 
+    val mImage = m.generate(1280, 720, 1000, ComplexNumber(-1.02100, 0.27010), 0.00001225, palette) 
     //val jImage = j.generate(1280, 720, ComplexNumber(0, 0), 2, palette)
     ImageIO.write(mImage, "png", new File("public/images/m.png"))
     //ImageIO.write(jImage, "png", new File("output/j.png"))
