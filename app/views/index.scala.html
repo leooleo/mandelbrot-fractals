@@ -1,5 +1,38 @@
 @()
 
 @main("Welcome to Play") {
-  <h1>Welcome to Play!</h1>
+  <h1>History of fractals</h1>
+  Let’s begin our discussion of recursion by examining 
+  the first appearance of fractals in modern mathematics. 
+  In 1883, German mathematician George Cantor developed 
+  simple rules to generate an infinite set:
+    1: Start with a line
+    2: Erase the middle third of that line
+    3: Recursively call step 2
+  <form action="/cantor">
+    <input type="submit" value="Generate cantor!" />
+  </form>
+
+  This fractal draws an ellipse based on a set of parameters 
+  that it receives as arguments. It then calls itself with 
+  those same parameters, adjusting them slightly. The result 
+  is a series of circles, each of which is drawn inside the previous circle.
+  <form action="/circle1">
+    <input type="submit" value="Generate first circle fractal!" />
+  </form>
+
+  For every circle displayed, draw a circle half its size to the 
+  left and right of that circle.
+  <form action="/circle2">
+    <input type="submit" value="Generate second circle fractal!" />
+  </form>
+
+  Adding a circle above, below, left and right of the first one.
+  <form action="/circle3">
+    <input type="submit" value="Generate third circle fractal!" />
+  </form>
+  Now, to mandelbrot fractal!
+  <form action="/mandelbrot&#63;iteration=1000&amp;complexReal=0&amp;complexIm=0&amp;scale=2&amp;zReal=-0.4&amp;zComplex=0.6">
+    <input type="submit" value="Generate mandelbrot fractal!" />
+  </form>
 }

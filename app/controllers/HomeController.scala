@@ -28,11 +28,6 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(views.html.index())
   }
 
-  def julia() = Action { implicit request: Request[AnyContent] =>  
-    Main.main(Array("foo","blah"))
-    Ok(views.html.simple_fractal())
-  }
-
   def mandelbrot(iteration: String, centerReal: String, centerIm: String, scale: String) = Action { implicit request: Request[AnyContent] =>  
     val m = new Mandelbrot()
     var cR: Double = centerReal.toDouble
@@ -42,6 +37,38 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
 
     val mImage = m.generate(840, 480, iT, ComplexNumber(cR, cI), sC, Palette.palette) 
     ImageIO.write(mImage, "png", new File("public/images/m.png"))
-    Ok(views.html.simple_fractal())
+    Ok(views.html.simple_fractal("m.png"))
+  }
+
+  def cantor() = Action { implicit request: Request[AnyContent] =>
+    Main.call_cantor()
+    Ok(views.html.simple_fractal("cantor.png"))
+  }
+
+  def circle_1() = Action { implicit request: Request[AnyContent] =>
+    Main.call_circle_1()
+    Ok(views.html.simple_fractal("circle_f1.png"))
+  }
+
+  def circle_2() = Action { implicit request: Request[AnyContent] =>
+    Main.call_circle_2()
+    Ok(views.html.simple_fractal("circle_f2.png"))
+  }
+
+  def circle_3() = Action { implicit request: Request[AnyContent] =>
+    Main.call_circle_3()
+    Ok(views.html.simple_fractal("circle_f3.png"))
+  }
+
+  def julia(zReal: String, zComplex: String, iteration: String, centerReal: String, centerIm: String, scale: String) = Action { implicit request: Request[AnyContent] =>  
+    val j = new Julia()
+    var cR: Double = centerReal.toDouble
+    var cI: Double = centerIm.toDouble
+    var sC: Double = scale.toDouble
+    var iT: Int = iteration.toInt
+
+    val mImage = j.generate(840, 480, iT, ComplexNumber(cR, cI), sC, Palette.palette) 
+    ImageIO.write(mImage, "png", new File("public/images/j.png"))
+    Ok(views.html.simple_fractal("j.png"))
   }
 }

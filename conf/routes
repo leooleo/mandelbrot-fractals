@@ -6,7 +6,11 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 GET     /mandelbrot                 controllers.HomeController.mandelbrot(iteration, complexReal, complexIm, scale)
-GET     /julia                      controllers.HomeController.julia
+GET     /julia                      controllers.HomeController.julia(iteration, complexReal, complexIm, scale, zReal, zComplex)
+GET     /cantor                     controllers.HomeController.cantor
+GET     /circle1                    controllers.HomeController.circle_1
+GET     /circle2                    controllers.HomeController.circle_2
+GET     /circle3                    controllers.HomeController.circle_3
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
