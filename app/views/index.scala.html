@@ -1,38 +1,65 @@
 @()
 
 @main("Welcome to Play") {
-  <h1>History of fractals</h1>
-  Let’s begin our discussion of recursion by examining 
-  the first appearance of fractals in modern mathematics. 
-  In 1883, German mathematician George Cantor developed 
-  simple rules to generate an infinite set:
-    1: Start with a line
-    2: Erase the middle third of that line
-    3: Recursively call step 2
-  <form action="/cantor">
-    <input type="submit" value="Generate cantor!" />
-  </form>
+    <header class="col-12 shadow">
+        <h1>History of fractals</h1>
+    </header>
 
-  This fractal draws an ellipse based on a set of parameters 
-  that it receives as arguments. It then calls itself with 
-  those same parameters, adjusting them slightly. The result 
-  is a series of circles, each of which is drawn inside the previous circle.
-  <form action="/circle1">
-    <input type="submit" value="Generate first circle fractal!" />
-  </form>
+    <div class="col-3 content">
+      <div class="content-style content shadow" id="fractal-1">
+          <p>
+              Let’s begin our discussion of recursion by examining
+              the first appearance of fractals in modern mathematics.
+              In 1883, German mathematician George Cantor developed
+              simple rules to generate an infinite set:
+          </p>
+          <ol>
+              <li>Start with a line</li>
+              <li>Erase the middle third of that line</li>
+              <li>Recursively call step 2</li>
+          </ol>
 
-  For every circle displayed, draw a circle half its size to the 
-  left and right of that circle.
-  <form action="/circle2">
-    <input type="submit" value="Generate second circle fractal!" />
-  </form>
+          <a href="/cantor"><div class="button shadow"><p>Generator Cantor!</p></div></a>
+      </div>
+    </div>
 
-  Adding a circle above, below, left and right of the first one.
-  <form action="/circle3">
-    <input type="submit" value="Generate third circle fractal!" />
-  </form>
-  Now, to mandelbrot fractal!
-  <form action="/mandelbrot&#63;iteration=1000&amp;complexReal=0&amp;complexIm=0&amp;scale=2&amp;zReal=-0.4&amp;zComplex=0.6">
-    <input type="submit" value="Generate mandelbrot fractal!" />
-  </form>
+    <div class="col-3 content">
+        <div class="content-style content shadow" id="fractal-2">
+            <p>
+                This fractal draws an ellipse based on a set of parameters
+                that it receives as arguments. It then calls itself with
+                those same parameters, adjusting them slightly. The result
+                is a series of circles, each of which is drawn inside the previous circle.
+            </p>
+            <a href="/circle1"><div class="button shadow"><p>Generate first circle fractal!</p></div></a>
+        </div>
+    </div>
+
+    <div class="col-3 content">
+        <div class="content-style content shadow" id="fractal-3">
+            <p>
+                For every circle displayed, draw a circle half its size to the
+                left and right of that circle.
+            </p>
+            <a href="/circle2"><div class="button shadow"><p>Generate second circle fractal!</p></div></a>
+        </div>
+    </div>
+
+    <div class="col-3 content">
+        <div class="content-style content shadow" id="fractal-4">
+            <p>
+                Adding a circle above, below, left and right of the first one.
+            </p>
+            <a href="/circle3"><div class="button shadow"><p>Generate third circle fractal!</p></div></a>
+        </div>
+    </div>
+
+    <div class="col-3 content">
+        <div class="content-style content shadow" id="fractal-5">
+            <p>
+                Now, to mandelbrot fractal!
+            </p>
+            <a href="/mandelbrot?iteration=1000&complexReal=0&complexIm=0&scale=2&zReal=-0.4&zComplex=0"><div class="button shadow"><p>Generate mandelbrot fractal!</p></div></a>
+        </div>
+    </div>
 }
