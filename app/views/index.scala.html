@@ -59,7 +59,16 @@
             <p>
                 Now, to mandelbrot fractal!
             </p>
-            <a href="/mandelbrot?iteration=1000&complexReal=0&complexIm=0&scale=2&zReal=-0.4&zComplex=0"><div class="button shadow"><p>Generate mandelbrot fractal!</p></div></a>
+            <form action="/mandelbrot" method="get">
+                <input type="hidden" name="iteration" value="1000">
+                <input type="hidden" name="complexReal" value="0">
+                <input type="hidden" name="complexIm" value="0">
+                <input type="hidden" name="zReal" value="-0.4">
+                <input type="hidden" name="zComplex" value="0">
+                <label>Scale:</label>
+                <input type="text" name="scale" placeholder="Enter scale" value="2" required>
+                <input type="submit" value="Generate mandelbrot fractal!" class="button shadow margin-top col-12">
+            </form>
         </div>
     </div>
 }

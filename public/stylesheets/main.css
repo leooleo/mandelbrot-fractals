@@ -65,7 +65,11 @@ a:active {
     background-color: #B22222;
     margin: 0px;
     padding: 8px;
+    border: 0px;
     border-radius: 5px;
+    color: #fff;
+    text-align: left;
+    font-size: 1em;
 }
 
 .button:hover {
@@ -74,6 +78,10 @@ a:active {
 
 .button p {
     margin: 0px;
+}
+
+.margin-top {
+    margin-top: 8px;
 }
 
 /* Para Tablet: */
