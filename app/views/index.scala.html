@@ -61,10 +61,13 @@
             </p>
             <form action="/mandelbrot" method="get">
                 <input type="hidden" name="iteration" value="1000">
-                <input type="hidden" name="complexReal" value="0">
-                <input type="hidden" name="complexIm" value="0">
+                <label>Complex number: </label><br>
+                <label>Real part: </label>
+                <input type="text" name="complexReal" value="0"><br>
+                <label>Complex part: </label>
+                <input type="text" name="complexIm" value="0"><br>
                 <input type="hidden" name="zReal" value="-0.4">
-                <input type="hidden" name="zComplex" value="0">
+                <input type="hidden" name="zComplex" value="0"><br> 
                 <label>Scale:</label>
                 <input type="text" name="scale" placeholder="Enter scale" value="2" required>
                 <input type="submit" value="Generate mandelbrot fractal!" class="button shadow margin-top col-12">
