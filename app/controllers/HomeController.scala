@@ -60,12 +60,14 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(views.html.simple_fractal("m.png"))
   }
 
-  def julia(zReal: String, zComplex: String, iteration: String, centerReal: String, centerIm: String, scale: String) = Action { implicit request: Request[AnyContent] =>  
-    val j = new Julia()
+  def julia(iteration: String, centerReal: String, centerIm: String, zReal: String, zComplex: String, scale: String) = Action { implicit request: Request[AnyContent] =>  
+    
     var cR: Double = centerReal.toDouble
     var cI: Double = centerIm.toDouble
     var sC: Double = scale.toDouble
     var iT: Int = iteration.toInt
+
+    val j = new Julia(ComplexNumber(zReal.toDouble, zComplex.toDouble))
 
     val mImage = j.generate(840, 480, iT, ComplexNumber(cR, cI), sC, Palette.palette) 
     ImageIO.write(mImage, "png", new File("public/images/j.png"))

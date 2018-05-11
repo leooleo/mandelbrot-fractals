@@ -6,7 +6,7 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 GET     /mandelbrot                 controllers.HomeController.mandelbrot(iteration, complexReal, complexIm, scale)
-GET     /julia                      controllers.HomeController.julia(iteration, complexReal, complexIm, scale, zReal, zComplex)
+GET     /julia                      controllers.HomeController.julia(iteration, complexReal, complexIm, zReal, zComplex, scale)
 GET     /cantor                     controllers.HomeController.cantor
 GET     /circle1                    controllers.HomeController.circle_1
 GET     /circle2                    controllers.HomeController.circle_2

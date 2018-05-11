@@ -14,6 +14,7 @@ window.onload = function() {
 }
 
 $("#cantor").click(() => {
+    $("#image").attr("src","assets/images/loading.gif");
     $.get("/cantor", function(data) {
         $("#image").attr("src","assets/images/cantor.png");
     });
@@ -21,6 +22,7 @@ $("#cantor").click(() => {
 
 
 $("#c1").click(() => {
+    $("#image").attr("src","assets/images/loading.gif");
     $.get("/circle1", function(data) {
         $("#image").attr("src","assets/images/circle_f1.png");
     });
@@ -28,6 +30,7 @@ $("#c1").click(() => {
 
 
 $("#c2").click(() => {
+    $("#image").attr("src","assets/images/loading.gif");
     $.get("/circle2", function(data) {
         $("#image").attr("src","assets/images/circle_f2.png");
     });
@@ -35,6 +38,7 @@ $("#c2").click(() => {
 
 
 $("#c3").click(() => {
+    $("#image").attr("src","assets/images/loading.gif");
     $.get("/circle3", function(data) {
         $("#image").attr("src","assets/images/circle_f3.png");
     });
@@ -53,6 +57,24 @@ $("#mandelbrot").submit((data) => {
     $("#image").attr("src","assets/images/loading.gif");
     $.get(url, function(data) {
         $("#image").attr("src","assets/images/m.png?timestamp=" + new Date().getTime());
+    });
+
+    event.preventDefault();
+})
+
+
+$("#julia").submit((data) => {
+    let url = '/julia?';
+    let i = 0;
+    const target = data.target;
+    while (data.target[i]) {
+        if (data.target[i].name === "") break;
+        url = `${url}&${data.target[i].name}=${data.target[i].value}`;
+        i++;
+    }
+    $("#image").attr("src","assets/images/loading.gif");
+    $.get(url, function(data) {
+        $("#image").attr("src","assets/images/j.png?timestamp=" + new Date().getTime());
     });
 
     event.preventDefault();

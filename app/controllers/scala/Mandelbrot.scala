@@ -16,7 +16,7 @@ class Mandelbrot {
     }
 
     if (it < maxIt) {
-      (it - log2(log2(z.abs))) / maxIt
+      it.toDouble / maxIt.toDouble
     }
     else {
       Double.PositiveInfinity
@@ -45,9 +45,8 @@ class Mandelbrot {
   }
 }
 
-class Julia extends Mandelbrot {
+class Julia (c: ComplexNumber) extends Mandelbrot {
   override def converges(z: ComplexNumber): Double = {
-    var c = ComplexNumber(0.45, 0.1428)
     var zz = z
     var it = 0
 
@@ -56,7 +55,7 @@ class Julia extends Mandelbrot {
       it += 1
     }
     if (it < maxIt) {
-      (it - log2(log2(z.abs))) / maxIt
+      it.toDouble / maxIt.toDouble
     }
     else {
       Double.PositiveInfinity
