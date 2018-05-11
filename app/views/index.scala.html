@@ -1,6 +1,8 @@
 @()
 
 @main("Welcome to Play") {
+    <script type="text/javascript" src="/assets/javascripts/jquery-3.3.1.min.js"></script>
+
     <header class="col-12 shadow">
         <h1>History of fractals</h1>
     </header>
@@ -19,7 +21,7 @@
               <li>Recursively call step 2</li>
           </ol>
 
-          <a href="/cantor"><div class="button shadow"><p>Generator Cantor!</p></div></a>
+          <a id="cantor" href="#"><div class="button shadow"><p>Generator Cantor!</p></div></a>
       </div>
     </div>
 
@@ -31,7 +33,7 @@
                 those same parameters, adjusting them slightly. The result
                 is a series of circles, each of which is drawn inside the previous circle.
             </p>
-            <a href="/circle1"><div class="button shadow"><p>Generate first circle fractal!</p></div></a>
+            <a id="c1" href="#"><div class="button shadow"><p>Generate first circle fractal!</p></div></a>
         </div>
     </div>
 
@@ -41,7 +43,7 @@
                 For every circle displayed, draw a circle half its size to the
                 left and right of that circle.
             </p>
-            <a href="/circle2"><div class="button shadow"><p>Generate second circle fractal!</p></div></a>
+            <a id="c2" href="#"><div class="button shadow"><p>Generate second circle fractal!</p></div></a>
         </div>
     </div>
 
@@ -50,7 +52,7 @@
             <p>
                 Adding a circle above, below, left and right of the first one.
             </p>
-            <a href="/circle3"><div class="button shadow"><p>Generate third circle fractal!</p></div></a>
+            <a id="c3" href="#"><div class="button shadow"><p>Generate third circle fractal!</p></div></a>
         </div>
     </div>
 
@@ -59,8 +61,9 @@
             <p>
                 Now, to mandelbrot fractal!
             </p>
-            <form action="/mandelbrot" method="get">
-                <input type="hidden" name="iteration" value="1000">
+            <form id="mandelbrot">
+                <label>Iterations: </label>
+                <input type="number" name="iteration" value="1000"><br><br>
                 <label>Complex number: </label><br>
                 <label>Real part: </label>
                 <input type="text" name="complexReal" value="0"><br>
@@ -74,4 +77,6 @@
             </form>
         </div>
     </div>
+
+    <img id="image" src="" alt="Fractal">
 }
