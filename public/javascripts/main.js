@@ -16,22 +16,25 @@ $( window ).resize(function() {
 })
 
 $("#cantor").click(() => {
-    $("#image-cantor").attr("src","assets/images/loading.gif");
+    $("#panel-img").show();
+    $("#image").attr("src","assets/images/loading.gif");
     $.get("/cantor", function(data) {
-        $("#image-cantor").attr("src","assets/images/cantor.png");
+        $("#image").attr("src","assets/images/cantor.png");
     });
 })
 
 
 $("#c1").click(() => {
-    $("#image-c1").attr("src","assets/images/loading.gif");
+    $("#panel-img").show();
+    $("#image").attr("src","assets/images/loading.gif");
     $.get("/circle1", function(data) {
-        $("#image-c1").attr("src","assets/images/circle_f1.png");
+        $("#image").attr("src","assets/images/circle_f1.png");
     });
 })
 
 
 $("#c2").click(() => {
+    $("#panel-img").show();
     $("#image").attr("src","assets/images/loading.gif");
     $.get("/circle2", function(data) {
         $("#image").attr("src","assets/images/circle_f2.png");
@@ -40,6 +43,7 @@ $("#c2").click(() => {
 
 
 $("#c3").click(() => {
+    $("#panel-img").show();
     $("#image").attr("src","assets/images/loading.gif");
     $.get("/circle3", function(data) {
         $("#image").attr("src","assets/images/circle_f3.png");
@@ -48,6 +52,7 @@ $("#c3").click(() => {
 
 
 $("#mandelbrot").submit((data) => {
+    $("#panel-img").show();
     let url = '/mandelbrot?';
     let i = 0;
     const target = data.target;
@@ -66,6 +71,7 @@ $("#mandelbrot").submit((data) => {
 
 
 $("#julia").submit((data) => {
+    $("#panel-img").show();
     let url = '/julia?';
     let i = 0;
     const target = data.target;
@@ -80,4 +86,8 @@ $("#julia").submit((data) => {
     });
 
     event.preventDefault();
+})
+
+$("#link-close-img").click(() => {
+    $("#panel-img").hide();
 })

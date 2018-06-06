@@ -2,7 +2,10 @@
 
 @main("Welcome to Play") {
     <script type="text/javascript" src="/assets/javascripts/jquery-3.3.1.min.js"></script>
-
+    <div id="panel-img">
+        <a id="link-close-img" href="javascript:void"><h1 id="close-img">x</h1></a>
+        <img id="image" src="" alt="Fractal">
+    </div>
     <div class="col-12 color-1 panel" id="fractal-1">
         <h1 class="shadow">History of Fractals</h1>
         <h2>
@@ -17,7 +20,6 @@
             </ol>
         </h2>
         <div class="col-12 panel-button"><a id="cantor" href="javascript:void"><div class="button shadow"><p>Generator Cantor!</p></div></a></div>
-        <img id="image-cantor" src="" alt="Fractal">
     </div>
 
     <div class="col-12 color-2 panel" id="fractal-2">
@@ -29,7 +31,6 @@
             is a series of circles, each of which is drawn inside the previous circle.
         </h2>
         <div class="col-12 panel-button"><a id="c1" href="javascript:void"><div class="button shadow"><p>Generate first circle fractal!</p></div></a></div>
-        <img id="image-c1" src="" alt="Fractal">
     </div>
 
     <div class="col-12 color-3 panel" id="fractal-3">
@@ -38,117 +39,56 @@
             For every circle displayed, draw a circle half its size to the
             left and right of that circle.
         </h2>
+        <div class="col-12 panel-button"><a id="c2" href="javascript:void"><div class="button shadow"><p>Generate second circle fractal!</p></div></a></div>
     </div>
+
     <div class="col-12 color-4 panel" id="fractal-4">
         <h1 class="shadow">History of Fractals</h1>
         <h2>
             Adding a circle above, below, left and right of the first one.
         </h2>
+        <div class="col-12 panel-button"><a id="c3" href="javascript:void"><div class="button shadow"><p>Generate third circle fractal!</p></div></a></div>
     </div>
+
     <div class="col-12 color-5 panel" id="fractal-5">
         <h1 class="shadow">History of Fractals</h1>
         <h2>
             Now, to mandelbrot fractal!
         </h2>
+        <div class="form">
+            <form id="mandelbrot">
+                <label>Iterations: </label>
+                <input type="number" name="iteration" value="1000">
+                <label>Real part: </label>
+                <input type="text" name="complexReal" value="0">
+                <label>Complex part: </label>
+                <input type="text" name="complexIm" value="0">
+                <label>Scale:</label>
+                <input type="text" name="scale" placeholder="Enter scale" value="2" required>
+                <div class="col-12 panel-button"><input type="submit" value="Generate mandelbrot fractal!" class="button shadow margin-top col-12"></div>
+            </form>
+        </div>
     </div>
     <div class="col-12 color-6 panel" id="fractal-6">
         <h1 class="shadow">History of Fractals</h1>
         <h2>
             Now, to Julia fractal!
         </h2>
-    </div>
-
-
-    <div class="col-3 content">
-      <div class="content-style content shadow">
-          <p>
-              Let’s begin our discussion of recursion by examining
-              the first appearance of fractals in modern mathematics.
-              In 1883, German mathematician George Cantor developed
-              simple rules to generate an infinite set:
-          </p>
-          <ol>
-              <li>Start with a line</li>
-              <li>Erase the middle third of that line</li>
-              <li>Recursively call step 2</li>
-          </ol>
-
-          <a id="cantor" href="#"><div class="button shadow"><p>Generator Cantor!</p></div></a>
-      </div>
-    </div>
-
-    <div class="col-3 content">
-        <div class="content-style content shadow" id="fractal-2">
-            <p>
-                This fractal draws an ellipse based on a set of parameters
-                that it receives as arguments. It then calls itself with
-                those same parameters, adjusting them slightly. The result
-                is a series of circles, each of which is drawn inside the previous circle.
-            </p>
-            <a id="c1" href="#"><div class="button shadow"><p>Generate first circle fractal!</p></div></a>
-        </div>
-    </div>
-
-    <div class="col-3 content">
-        <div class="content-style content shadow" id="fractal-3">
-            <p>
-                For every circle displayed, draw a circle half its size to the
-                left and right of that circle.
-            </p>
-            <a id="c2" href="#"><div class="button shadow"><p>Generate second circle fractal!</p></div></a>
-        </div>
-    </div>
-
-    <div class="col-3 content">
-        <div class="content-style content shadow" id="fractal-4">
-            <p>
-                Adding a circle above, below, left and right of the first one.
-            </p>
-            <a id="c3" href="#"><div class="button shadow"><p>Generate third circle fractal!</p></div></a>
-        </div>
-    </div>
-
-    <div class="col-3 content">
-        <div class="content-style content shadow" id="fractal-5">
-            <p>
-                Now, to mandelbrot fractal!
-            </p>
-            <form id="mandelbrot">
-                <label>Iterations: </label>
-                <input type="number" name="iteration" value="1000"><br><br>
-                <label>Complex number for center: </label><br>
-                <label>Real part: </label>
-                <input type="text" name="complexReal" value="0"><br>
-                <label>Complex part: </label>
-                <input type="text" name="complexIm" value="0"><br>
-                <label>Scale:</label>
-                <input type="text" name="scale" placeholder="Enter scale" value="2" required>
-                <input type="submit" value="Generate mandelbrot fractal!" class="button shadow margin-top col-12">
-            </form>
-        </div>
-    </div>
-
-    <div class="col-3 content">
-        <div class="content-style content shadow" id="fractal-5">
-            <p>
-                Now, to Julia fractal!
-            </p>
+        <div class="form">
             <form id="julia">
                 <label>Iterations: </label>
-                <input type="number" name="iteration" value="1000"><br><br>
-                <label>Complex number for center: </label><br>
+                <input type="number" name="iteration" value="1000">
                 <label>Real part: </label>
-                <input type="text" name="complexReal" value="0"><br>
+                <input type="text" name="complexReal" value="0">
                 <label>Complex part: </label>
-                <input type="text" name="complexIm" value="0"><br><br>
-                <label>Complex number for C: </label><br>
+                <input type="text" name="complexIm" value="0">
                 <label>Real part: </label>
-                <input type="text" name="zReal" value="-0.4"><br>
+                <input type="text" name="zReal" value="-0.4">
                 <label>Complex part: </label>
-                <input type="text" name="zComplex" value="0.6"><br><br>
+                <input type="text" name="zComplex" value="0.6">
                 <label>Scale:</label>
                 <input type="text" name="scale" placeholder="Enter scale" value="2" required>
-                <input type="submit" value="Generate julia fractal!" class="button shadow margin-top col-12">
+                <div class="col-12 panel-button"><input type="submit" value="Generate julia fractal!" class="button shadow margin-top col-12"></div>
             </form>
         </div>
     </div>
