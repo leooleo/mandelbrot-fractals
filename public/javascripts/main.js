@@ -16,17 +16,17 @@ $( window ).resize(function() {
 })
 
 $("#cantor").click(() => {
-    $("#image").attr("src","assets/images/loading.gif");
+    $("#image-cantor").attr("src","assets/images/loading.gif");
     $.get("/cantor", function(data) {
-        $("#image").attr("src","assets/images/cantor.png");
+        $("#image-cantor").attr("src","assets/images/cantor.png");
     });
 })
 
 
 $("#c1").click(() => {
-    $("#image").attr("src","assets/images/loading.gif");
+    $("#image-c1").attr("src","assets/images/loading.gif");
     $.get("/circle1", function(data) {
-        $("#image").attr("src","assets/images/circle_f1.png");
+        $("#image-c1").attr("src","assets/images/circle_f1.png");
     });
 })
 

@@ -66,22 +66,27 @@ a:active {
 }
 
 .button {
-    background-color: #B22222;
     margin: 0px;
     padding: 8px;
     border: 0px;
     border-radius: 5px;
     color: #fff;
-    text-align: left;
+    text-align: center;
     font-size: 1em;
-}
-
-.button:hover {
-    background-color: #B20000;
 }
 
 .button p {
     margin: 0px;
+}
+
+#fractal-1 .button {background-color: #b5c0bd;}
+#fractal-1 .button:hover {background-color: #fff;}
+#fractal-2 .button {background-color: #498d79;}
+#fractal-2 .button:hover {background-color: #aaf1d9;}
+
+.panel-button {
+    padding-left: 25%;
+    padding-right: 25%;
 }
 
 .margin-top {
@@ -91,39 +96,44 @@ a:active {
 .panel {
     text-align: center;
     padding: 16px;
+    position: relative;
 }
 
 h1 {
     color: #000;
 }
+
+img {
+    margin: 8px;
+}
+
 #fractal-3 h1, #fractal-4 h1, #fractal-5 h1, #fractal-6 h1 {
     color: #fff;
 }
 
 .color-1 {
     background-color: #E7F3EF;
-    color: rgb(31, 45, 61, 0.4);
+    color: rgba(31, 45, 61, 0.4);
 }
-
 .color-2 {
     background-color: #79BEA8;
-    color: rgb(31, 45, 61, 0.4);
+    color: rgba(31, 45, 61, 0.4);
 }
 .color-3 {
     background-color: #448D76;
-    color: rgb(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
 }
 .color-4 {
     background-color: #23483C;
-    color: rgb(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
 }
 .color-5 {
     background-color: #093426;
-    color: rgb(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
 }
 .color-6 {
     background-color: #092834;
-    color: rgb(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 /* Para Tablet: */
