@@ -26,6 +26,10 @@ header {
     text-align: center;
 }
 
+ol {
+    text-align: left;
+}
+
 a:link {
     text-decoration: none;
 	color: #fff;
@@ -47,7 +51,7 @@ a:active {
 }
 
 .shadow {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .content {
@@ -82,6 +86,44 @@ a:active {
 
 .margin-top {
     margin-top: 8px;
+}
+
+.panel {
+    text-align: center;
+    padding: 16px;
+}
+
+h1 {
+    color: #000;
+}
+#fractal-3 h1, #fractal-4 h1, #fractal-5 h1, #fractal-6 h1 {
+    color: #fff;
+}
+
+.color-1 {
+    background-color: #E7F3EF;
+    color: rgb(31, 45, 61, 0.4);
+}
+
+.color-2 {
+    background-color: #79BEA8;
+    color: rgb(31, 45, 61, 0.4);
+}
+.color-3 {
+    background-color: #448D76;
+    color: rgb(255, 255, 255, 0.6);
+}
+.color-4 {
+    background-color: #23483C;
+    color: rgb(255, 255, 255, 0.6);
+}
+.color-5 {
+    background-color: #093426;
+    color: rgb(255, 255, 255, 0.6);
+}
+.color-6 {
+    background-color: #092834;
+    color: rgb(255, 255, 255, 0.6);
 }
 
 /* Para Tablet: */

@@ -3,12 +3,58 @@
 @main("Welcome to Play") {
     <script type="text/javascript" src="/assets/javascripts/jquery-3.3.1.min.js"></script>
 
-    <header class="col-12 shadow">
-        <h1>History of fractals</h1>
-    </header>
+    <div class="col-12 color-1 panel" id="fractal-1">
+        <h1 class="shadow">History of Fractals</h1>
+        <h2>
+            Let’s begin our discussion of recursion by examining
+            the first appearance of fractals in modern mathematics.
+            In 1883, German mathematician George Cantor developed
+            simple rules to generate an infinite set:
+            <ol>
+                <li>Start with a line</li>
+                <li>Erase the middle third of that line</li>
+                <li>Recursively call step 2</li>
+            </ol>
+        </h2>
+    </div>
+    <div class="col-12 color-2 panel" id="fractal-2">
+        <h1 class="shadow">History of Fractals</h1>
+        <h2>
+            This fractal draws an ellipse based on a set of parameters
+            that it receives as arguments. It then calls itself with
+            those same parameters, adjusting them slightly. The result
+            is a series of circles, each of which is drawn inside the previous circle.
+        </h2>
+    </div>
+    <div class="col-12 color-3 panel" id="fractal-3">
+        <h1 class="shadow">History of Fractals</h1>
+        <h2>
+            For every circle displayed, draw a circle half its size to the
+            left and right of that circle.
+        </h2>
+    </div>
+    <div class="col-12 color-4 panel" id="fractal-4">
+        <h1 class="shadow">History of Fractals</h1>
+        <h2>
+            Adding a circle above, below, left and right of the first one.
+        </h2>
+    </div>
+    <div class="col-12 color-5 panel" id="fractal-5">
+        <h1 class="shadow">History of Fractals</h1>
+        <h2>
+            Now, to mandelbrot fractal!
+        </h2>
+    </div>
+    <div class="col-12 color-6 panel" id="fractal-6">
+        <h1 class="shadow">History of Fractals</h1>
+        <h2>
+            Now, to Julia fractal!
+        </h2>
+    </div>
+
 
     <div class="col-3 content">
-      <div class="content-style content shadow" id="fractal-1">
+      <div class="content-style content shadow">
           <p>
               Let’s begin our discussion of recursion by examining
               the first appearance of fractals in modern mathematics.
