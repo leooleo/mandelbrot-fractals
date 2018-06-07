@@ -111,3 +111,21 @@ $("#next-fractal-4").click(() => {
 $("#next-fractal-5").click(() => {
     $('html, body').animate({ scrollTop: ($(window).height() * 5) }, 2000);
 })
+
+$(window).scroll(() => {
+    if ($(window).scrollTop() >= ($( window ).height() - 32)) {
+        $("#fractal-2 *").css('opacity', 1);
+    }
+    if ($(window).scrollTop() >= ( 2 * ($( window ).height()) - 32)) {
+        $("#fractal-3 *").css('opacity', 1);
+    }
+    if ($(window).scrollTop() >= ( 3 * ($( window ).height()) - 32)) {
+        $("#fractal-4 *").css('opacity', 1);
+    }
+    if ($(window).scrollTop() >= ( 4 * ($( window ).height()) - 32)) {
+        $("#fractal-5 *").css('opacity', 1);
+    }
+    if ($(window).scrollTop() >= ( 5 * ($( window ).height()) - 32)) {
+        $("#fractal-6 *").css('opacity', 1);
+    }
+})

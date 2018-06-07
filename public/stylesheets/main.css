@@ -183,6 +183,32 @@ img {
 #fractal-6 .button {background-color: #4f0000;}
 #fractal-6 .button:hover {background-color: #b73e47;}
 
+#fractal-2 * {
+    opacity: 0;
+    -webkit-transition: opacity 1s linear; /* For Safari 3.1 to 6.0 */
+    transition: opacity 1s linear;
+}
+#fractal-3 * {
+    opacity: 0;
+    -webkit-transition: opacity 1s linear; /* For Safari 3.1 to 6.0 */
+    transition: opacity 1s linear;
+}
+#fractal-4 * {
+    opacity: 0;
+    -webkit-transition: opacity 1s linear; /* For Safari 3.1 to 6.0 */
+    transition: opacity 1s linear;
+}
+#fractal-5 * {
+    opacity: 0;
+    -webkit-transition: opacity 1s linear; /* For Safari 3.1 to 6.0 */
+    transition: opacity 1s linear;
+}
+#fractal-6 * {
+    opacity: 0;
+    -webkit-transition: opacity 1s linear; /* For Safari 3.1 to 6.0 */
+    transition: opacity 1s linear;
+}
+
 /* Para Tablet: */
 @media only screen and (min-width: 600px) {
 .col-m-1 {width: 8.33%;}
