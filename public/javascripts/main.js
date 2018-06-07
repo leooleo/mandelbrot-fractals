@@ -1,5 +1,5 @@
 function divChangeHeight(div) {
-    $('#'+div).height($( window ).height());
+    $('#'+div).height($( window ).height() - 32);
 }
 
 function divsChange() {
@@ -90,4 +90,24 @@ $("#julia").submit((data) => {
 
 $("#link-close-img").click(() => {
     $("#panel-img").hide();
+})
+
+$("#next-fractal-1").click(() => {
+    $('html, body').animate({ scrollTop: ($(window).height()) }, 2000);
+})
+
+$("#next-fractal-2").click(() => {
+    $('html, body').animate({ scrollTop: ($(window).height() * 2) }, 2000);
+})
+
+$("#next-fractal-3").click(() => {
+    $('html, body').animate({ scrollTop: ($(window).height() * 3) }, 2000);
+})
+
+$("#next-fractal-4").click(() => {
+    $('html, body').animate({ scrollTop: ($(window).height() * 4) }, 2000);
+})
+
+$("#next-fractal-5").click(() => {
+    $('html, body').animate({ scrollTop: ($(window).height() * 5) }, 2000);
 })

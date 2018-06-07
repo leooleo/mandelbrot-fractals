@@ -79,19 +79,6 @@ a:active {
     margin: 0px;
 }
 
-#fractal-1 .button {background-color: #79bea8;}
-#fractal-1 .button:hover {background-color: #ddffff;}
-#fractal-2 .button {background-color: #498d79;}
-#fractal-2 .button:hover {background-color: #aaf1d9;}
-#fractal-3 .button {background-color: #0d5f4a;}
-#fractal-3 .button:hover {background-color: #74bea5;}
-#fractal-4 .button {background-color: #002016;}
-#fractal-4 .button:hover {background-color: #4e7466;}
-#fractal-5 .button {background-color: #000f00;}
-#fractal-5 .button:hover {background-color: #4355e4e;}
-#fractal-6 .button {background-color: #00000e;}
-#fractal-6 .button:hover {background-color: #35505e;}
-
 .form {
     margin: 16px;
     background: rgba(255, 255, 255, 0.1);
@@ -119,7 +106,7 @@ label {
 }
 
 h1 {
-    color: #000;
+    color: #fff;
 }
 
 img {
@@ -140,6 +127,17 @@ img {
     text-align: center;
 }
 
+.next {
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Safari 3-8 */
+    transform: rotate(180deg);
+    font-size: 4em;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 16px);
+    color: #fff;
+}
+
 #close-img {
     color: #fff;
     text-align: right;
@@ -147,34 +145,43 @@ img {
     margin-right: 16px;
 }
 
-#fractal-3 h1, #fractal-4 h1, #fractal-5 h1, #fractal-6 h1 {
-    color: #fff;
-}
-
 .color-1 {
-    background-color: #aaf1d9;
-    color: rgba(31, 45, 61, 0.4);
-}
-.color-2 {
-    background-color: #79BEA8;
-    color: rgba(31, 45, 61, 0.4);
-}
-.color-3 {
     background-color: #448D76;
     color: rgba(255, 255, 255, 0.6);
 }
+.color-2 {
+    background-color: #133863;
+    color: rgba(255, 255, 255, 0.6);
+}
+.color-3 {
+    background-color: #341809;
+    color: rgba(255, 255, 255, 0.6);
+}
 .color-4 {
-    background-color: #23483C;
+    background-color: #300D6E;
     color: rgba(255, 255, 255, 0.6);
 }
 .color-5 {
-    background-color: #093426;
+    background-color: #1d1d1d;
     color: rgba(255, 255, 255, 0.6);
 }
 .color-6 {
-    background-color: #092834;
+    background-color: #820020;
     color: rgba(255, 255, 255, 0.6);
 }
+
+#fractal-1 .button {background-color: #23483C;}
+#fractal-1 .button:hover {background-color: #79BEA8;}
+#fractal-2 .button {background-color: #091D34;}
+#fractal-2 .button:hover {background-color: #236AB9;}
+#fractal-3 .button {background-color: #160000;}
+#fractal-3 .button:hover {background-color: #9D3802;}
+#fractal-4 .button {background-color: #190934;}
+#fractal-4 .button:hover {background-color: #5A18C9;}
+#fractal-5 .button {background-color: #000000;}
+#fractal-5 .button:hover {background-color: #444444;}
+#fractal-6 .button {background-color: #4f0000;}
+#fractal-6 .button:hover {background-color: #b73e47;}
 
 /* Para Tablet: */
 @media only screen and (min-width: 600px) {
