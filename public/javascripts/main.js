@@ -63,7 +63,7 @@ $("#mandelbrot").submit((data) => {
     }
     $("#image").attr("src","assets/images/loading.gif");
     $.get(url, function(data) {
-        $("#image").attr("src","assets/images/m.png?timestamp=" + new Date().getTime());
+        $("#image").attr("src","assets/images/result.png?timestamp=" + new Date().getTime());
     });
 
     event.preventDefault();
@@ -82,7 +82,7 @@ $("#julia").submit((data) => {
     }
     $("#image").attr("src","assets/images/loading.gif");
     $.get(url, function(data) {
-        $("#image").attr("src","assets/images/j.png?timestamp=" + new Date().getTime());
+        $("#image").attr("src","assets/images/result.png?timestamp=" + new Date().getTime());
     });
 
     event.preventDefault();

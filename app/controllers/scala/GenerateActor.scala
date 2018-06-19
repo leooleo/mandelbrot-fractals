@@ -7,12 +7,13 @@ object GenerateActor {
   case object Generate
   case class Generated(image: BufferedImage)
 
-  def props(width: Int, height: Int, center: ComplexNumber, c: ComplexNumber, scale: Double, iterations: Int, palette: Palette) =
-    Props(new GenerateActor(width, height, center, c, scale, iterations, palette))
+  def props(width: Int, height: Int, center: ComplexNumber, c: ComplexNumber, scale: Double, iterations: Int, palette: Palette, julia: Boolean) =
+    Props(new GenerateActor(width, height, center, c, scale, iterations, palette, julia))
 }
 
-class GenerateActor(width: Int, height: Int, center: ComplexNumber, c: ComplexNumber, scale: Double, iterations: Int, palette: Palette) extends Actor with ActorLogging {
+class GenerateActor(width: Int, height: Int, center: ComplexNumber, c: ComplexNumber, scale: Double, iterations: Int, palette: Palette, julia: Boolean) extends Actor with ActorLogging {
   import ConvergeActor._
+  import ConvergeJuliaActor._
   import GenerateActor._
 
   def receive = {
@@ -39,7 +40,8 @@ class GenerateActor(width: Int, height: Int, center: ComplexNumber, c: ComplexNu
 
           current = current + 1
           if (current >= max) {
-            context.actorOf(ConvergeActor.props(points)) ! Converge 
+            if (!julia) context.actorOf(ConvergeActor.props(points)) ! Converge
+            else context.actorOf(ConvergeJuliaActor.props(c, points)) ! Converge
             points = Vector()
             current = 0
           }

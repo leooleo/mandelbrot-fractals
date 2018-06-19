@@ -1,6 +1,8 @@
 package controllers
 
-import akka.actor.ActorSystem
+import akka.actor._
+import scala.concurrent._
+import duration._
 
 import javax.inject._
 import play.api._
@@ -52,7 +54,7 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   }
 
   def mandelbrot(iteration: String, centerReal: String, centerIm: String, scale: String) = Action { implicit request: Request[AnyContent] =>  
-    val m = new Mandelbrot()
+  println("-0.2".toDouble)
     var cR: Double = centerReal.toDouble
     var cI: Double = centerIm.toDouble
     var sC: Double = scale.toDouble
@@ -60,7 +62,14 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     var width: Int = 840
     var height: Int = 480
  
-    ActorSystem("Fractals").actorOf(MainActor.props(width, height, ComplexNumber(cR, cI), ComplexNumber(0, 0), sC, iT, Palette.palette), "main")
+    // val system = ActorSystem("Fractals")
+    // system.actorOf(MainActor.props(width, height, ComplexNumber(cR, cI), ComplexNumber(0, 0), sC, iT, Palette.palette, false), "main")
+    // Await.result(system.whenTerminated, Duration.Inf)
+    // Ok(views.html.simple_fractal("result.png"))
+
+    val m = new Mandelbrot()
+    val mImage = m.generate(840, 480, iT, ComplexNumber(cR, cI), sC, Palette.palette) 
+    ImageIO.write(mImage, "png", new File("public/images/m.png"))
     Ok(views.html.simple_fractal("m.png"))
   }
 
@@ -73,10 +82,15 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     var width: Int = 840
     var height: Int = 480
 
-    val j = new Julia(ComplexNumber(zReal.toDouble, zComplex.toDouble))
+    val system = ActorSystem("Fractals")
+    system.actorOf(MainActor.props(width, height, ComplexNumber(cR, cI), ComplexNumber(zReal.toDouble, zComplex.toDouble), sC, iT, Palette.palette, true), "main")
+    Await.result(system.whenTerminated, Duration.Inf)
+    Ok(views.html.simple_fractal("result.png"))
 
-    val mImage = j.generate(840, 480, iT, ComplexNumber(cR, cI), sC, Palette.palette) 
-    ImageIO.write(mImage, "png", new File("public/images/j.png"))
-    Ok(views.html.simple_fractal("j.png"))
+
+    // val j = new Julia(ComplexNumber(zReal.toDouble, zComplex.toDouble))
+    // val mImage = j.generate(840, 480, iT, ComplexNumber(cR, cI), sC, Palette.palette) 
+    // ImageIO.write(mImage, "png", new File("public/images/j.png"))
+    // Ok(views.html.simple_fractal("j.png"))
   }
 }
