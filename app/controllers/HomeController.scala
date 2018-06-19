@@ -1,5 +1,7 @@
 package controllers
 
+import akka.actor.ActorSystem
+
 import javax.inject._
 import play.api._
 import play.api.mvc._
@@ -13,6 +15,7 @@ import javax.imageio.ImageIO
 import scala.Main
 import scala.Mandelbrot
 import scala.Julia
+import scala.MainActor
 
 @Singleton
 class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
@@ -54,9 +57,10 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     var cI: Double = centerIm.toDouble
     var sC: Double = scale.toDouble
     var iT: Int = iteration.toInt
-
-    val mImage = m.generate(840, 480, iT, ComplexNumber(cR, cI), sC, Palette.palette) 
-    ImageIO.write(mImage, "png", new File("public/images/m.png"))
+    var width: Int = 840
+    var height: Int = 480
+ 
+    ActorSystem("Fractals").actorOf(MainActor.props(width, height, ComplexNumber(cR, cI), ComplexNumber(0, 0), sC, iT, Palette.palette), "main")
     Ok(views.html.simple_fractal("m.png"))
   }
 
@@ -66,6 +70,8 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     var cI: Double = centerIm.toDouble
     var sC: Double = scale.toDouble
     var iT: Int = iteration.toInt
+    var width: Int = 840
+    var height: Int = 480
 
     val j = new Julia(ComplexNumber(zReal.toDouble, zComplex.toDouble))
 
