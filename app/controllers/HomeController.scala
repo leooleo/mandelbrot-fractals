@@ -62,15 +62,15 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     var width: Int = 840
     var height: Int = 480
  
-    // val system = ActorSystem("Fractals")
-    // system.actorOf(MainActor.props(width, height, ComplexNumber(cR, cI), ComplexNumber(0, 0), sC, iT, Palette.palette, false), "main")
-    // Await.result(system.whenTerminated, Duration.Inf)
-    // Ok(views.html.simple_fractal("result.png"))
+    val system = ActorSystem("Fractals")
+    system.actorOf(MainActor.props(width, height, ComplexNumber(cR, cI), ComplexNumber(0, 0), sC, iT, Palette.palette, false), "main")
+    Await.result(system.whenTerminated, Duration.Inf)
+    Ok(views.html.simple_fractal("result.png"))
 
-    val m = new Mandelbrot()
-    val mImage = m.generate(840, 480, iT, ComplexNumber(cR, cI), sC, Palette.palette) 
-    ImageIO.write(mImage, "png", new File("public/images/m.png"))
-    Ok(views.html.simple_fractal("m.png"))
+    // val m = new Mandelbrot()
+    // val mImage = m.generate(840, 480, iT, ComplexNumber(cR, cI), sC, Palette.palette) 
+    // ImageIO.write(mImage, "png", new File("public/images/m.png"))
+    // Ok(views.html.simple_fractal("m.png"))
   }
 
   def julia(iteration: String, centerReal: String, centerIm: String, zReal: String, zComplex: String, scale: String) = Action { implicit request: Request[AnyContent] =>  
